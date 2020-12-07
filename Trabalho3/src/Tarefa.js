@@ -11,7 +11,8 @@ class Tarefa extends React.Component {
   }
 
   fundoazul() {
-    if(["estudar", "ler"].indexOf(this.props.item.descricao.toLowerCase()) !== -1) {
+
+    if(this.props.item.descricao.toLowerCase().includes("ler") || this.props.item.descricao.toLowerCase().includes("estudar")) {
       return {
         background: "#29b6f6"
       }
